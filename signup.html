@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Create and Account</h2>
+        <form id="signupForm">
+            <label for="name" style="font-family:Arial, Helvetica, sans-serif;">Name</label>
+            <input type="text" placeholder="Enter Your Full Name" id="name" name="name" required>
+            
+            <label for="faculty" style="font-family: Arial, Helvetica, sans-serif;">Faculty</label>
+            <select id="faculty" name="faculty" required>
+                <option value="" disabled selected>Select Faculty</option>
+                <option value="Faculty of Social Sciences">Faculty of Social Sciences</option>
+                <option value="Faculty of Economics and Management Sciences">Faculty of Economics and Management Sciences</option>
+                <option value="Faculty of Engineering and Technology">Faculty of Engineering and Technology</option>
+            </select>
+            
+            <label for="department" style="font-family: Arial, Helvetica, sans-serif;">Department</label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Select Department</option>
+                <!-- Add department options based on faculty selection using JavaScript -->
+            </select>
+            
+             
+            <label for="email" style="font-family: Arial, Helvetica, sans-serif;">Email</label>
+            <input type="email" placeholder="Enter your Email" id="email" name="email" required>
+            <div class="error-message" id="emailError"></div>
+            
+            <label for="password" style="font-family: Arial, Helvetica, sans-serif;">Password:</label>
+            <input type="password" placeholder="Enter your Password" id="password" name="password" required>
+            
+            <label for="confirmPassword" style="font-family: Arial, Helvetica, sans-serif;">Confirm Password</label>
+            <input type="password" placeholder="Confrim Your Password" id="confirmPassword" name="confirmPassword" required>
+            <div class="error-message" id="passwordError"></div>
+            
+            <input type="submit" id="signupbtn" value="Sign Up">
+
+            <div class="signup-box">
+                <h3>or</h3>
+                <div class="social-login">
+                    <button id="github-login" class="social-btn">
+                        <img src="github-logo.png" alt="GitHub" class="social-icon"> GitHub
+                    </button>
+                    <button id="google-login" class="social-btn">
+                        <img src="google-logo.png" alt="Google" class="social-icon">Google
+                    </button>
+                </div>
+            </div>
+            <p id="form_para">Already Have an account? <a href="login.html">Login</a></p>
+        </form>
+    
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
